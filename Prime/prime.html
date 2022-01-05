@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <title>Coding Exam 1</title>
+        <link rel="stylesheet" type="text/css" href="prime.css"/>
+        <script type="text/javascript" src="prime.js"></script>
+    </header>
+    <form name="inputform">
+        <label for="number"><strong>Enter a Number:</strong></label>
+        <input type="number" id="input" name="input" value="50"><br><br>
+        <input type="button" name="submit" value="Click Here to Generate List" onclick="Sort_Numbers();">
+        
+        
+        <p><strong> *Generate List Before Calculating the Sum* </strong></p>
+    </form>
+    <hr>
+    <body>
+        <div id=prime_list>
+        <h3>Prime List: </h3>
+        <ul id="prime">
+
+        </ul>
+        <input type="button" name="sum" value= "Click Here for the Sum of All Primes" onclick="Sum_Numbers(primes)">
+        <h3>Sum:</h3>
+        
+        <p id="sum">
+
+        </p>
+        </div>
+        <hr>
+        <div id=not_prime_list>
+        <h3>Not Prime List: </h3>
+        <ul id="not_prime">
+
+        </ul>
+        <input type="button" name="sum" value= "Click Here for the Sum of All Non - Primes" onclick="Sum_Numbers_2(not_primes)">
+        <h3>Sum:</h3>
+        
+        <p id="sum_2">
+
+        </p>
+        </div>
+        <hr>
+        <a href="/index.html"><button>Click This Button to Return to the Home Page</button></a>
+    </body>
+
+</html>

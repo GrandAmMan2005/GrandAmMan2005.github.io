@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Keypress</title>
+  <link rel="stylesheet" href="/new_style.css">
+  <link rel="icon" href="/icon.jpg">
+</head>
+
+<body>
+<div class="container">
+  <nav>
+    <input type="checkbox" id="show-search">
+    <input type="checkbox" id="show-menu">
+    <label for="show-menu" class="menu-icon"><em class="fas fa-bars"></em></label>
+    <div class="content">
+      <div class="logo"><a href="#">3GIntegra.com</a></div>
+      <ul class="links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/intro.html">Integra Improvements</a></li>
+        <li>
+          <a href="#" class="desktop-link">CSCI450 Assignments</a>
+          <input type="checkbox" id="show-features">
+          <label for="show-features">CSCI450 Assignments</label>
+          <ul>
+            <li><a href="/chapter4/chapter04.html">Color Counter</a></li>
+            <li><a href="/chapter7/sort.html">Sort String Arrays</a></li>
+            <li><a href="/chapter8/cards.html">JavaScript Business Cards</a></li>
+            <li><a href="/dynamic/dynamic.html">Dynamic Cards</a></li>
+            <li><a href="/keypress/keypress.html">Key Press Assignment</a></li>
+            <li><a href="/jQuery/jquery.html">JQuery Demo</a></li>
+            <li><a href="/AJAX Textbook Code/livesearch.html">AJAX Demo</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="desktop-link">Projects</a>
+          <input type="checkbox" id="show-services">
+          <label for="show-services">Projects</label>
+          <ul>
+            <li><a href="/project/audiodemo.html">Audio Player</a></li>
+            <li><a href="/Prime/prime.html">Test for Prime</a></li>
+            <li><a href="/Collection/collection.html">Marvel Super Hero Searcher</a></li>
+            <li><a href="/88998811/exam.php">PHP Exam</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="desktop-link">Feedback</a>
+          <input type="checkbox" id="show-services">
+          <label for="show-services">Feedback</label>
+          <ul>
+            <li><a href="mailto:Grand.Am.Man2005@gmail.com">Send Me an Email</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="text"><script type="text/javascript">
+  function displayKey(e) {
+    // which key was pressed?
+    if (e.keyCode) {
+      var keycode=e.keyCode;
+    }  else {
+      var keycode=e.which;
+    }
+    character=String.fromCharCode(keycode);
+    console.log(character);
+
+    if(character == "r"){
+      document.body.style.backgroundColor = "red";
+      document.body.style.color = "white";
+    }
+    else if(character == "g"){
+      document.body.style.backgroundColor = "green";
+      document.body.style.color = "white";
+    }
+    else if(character == "b"){
+      document.body.style.backgroundColor = "blue";
+      document.body.style.color = "white";
+    }
+    else if(character == "a"){
+      character = character.toUpperCase();
+    }
+    else if(character == "e"){
+      character = character.toUpperCase();
+    }
+    else if(character == "i"){
+      character = character.toUpperCase();
+    }
+    else if(character == "o"){
+      character = character.toUpperCase();
+    }
+    else if(character == "u"){
+      character = character.toUpperCase();
+    }
+    // I'm excluding Y as a vowel.
+
+    // This will check for uppercase RGB
+    if(character == "R"){
+      document.body.style.backgroundColor = "red";
+      document.body.style.color = "white";
+    }
+    else if(character == "G"){
+      document.body.style.backgroundColor = "green";
+      document.body.style.color = "white";
+    }
+    else if(character == "B"){
+      document.body.style.backgroundColor = "blue";
+      document.body.style.color = "white";
+    }
+    // find the object for the destination paragraph
+    var keysParagraph = document.getElementById('keys');
+
+    // add the character to the paragraph
+    keysParagraph.innerHTML += character;
+  }
+</script>
+  <div onkeypress="displayKey(event)">
+  <h1>Displaying Typed Characters</h1>
+  <p>This document includes a simple script that displays
+    the keys you type as a new paragraph below. Type a few keys
+    to try it. </p>
+  <div id="keys"></div>
+  </div>
+
+</div>
+
+
+</body>
+
+</html>

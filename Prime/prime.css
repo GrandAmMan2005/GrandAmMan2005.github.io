@@ -1,0 +1,23 @@
+li{
+    display:inline;
+}
+form{
+    border: 4px solid red;
+    padding:10px;
+    background-color:#A2A2A2;
+}
+body{
+    background-color:#90C8F0;
+}
+#prime_list{
+    background-color:#A2A2A2;
+    border: 4px solid red;
+    margin:10px;
+    padding:10px;
+}
+#not_prime_list{
+    background-color:#A2A2A2;
+    border: 4px solid red;
+    margin:10px;
+    padding:10px;
+}

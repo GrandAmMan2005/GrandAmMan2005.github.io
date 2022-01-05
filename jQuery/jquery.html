@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <title>JQuery Assignment</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+  <script>
+    // Div Modifier Code
+    $(document).ready(function () {
+      $('#div_1').on('mouseover', function () {
+        $('#div_1').css({ "background-color": 'yellow' });
+      });
+      $('#div_1').on('mouseleave', function () {
+        $('#div_1').css({ "background-color": 'white' });
+      });
+      $('#div_2').on('mouseover', function () {
+        $('#div_2').css({ "background-color": 'yellow' });
+      });
+      $('#div_2').on('mouseleave', function () {
+        $('#div_2').css({ "background-color": 'white' });
+      });
+      $('#div_3').on('mouseover', function () {
+        $('#div_3').css({ "background-color": 'yellow' });
+      });
+      $('#div_3').on('mouseleave', function () {
+        $('#div_3').css({ "background-color": 'white' });
+      });
+      $('#btn_1').on('click', function () {
+        $('#div_1').fadeOut(800);
+      })
+      $('#btn_2').on('click', function () {
+        $('#div_2').fadeOut(800);
+      })
+      $('#btn_3').on('click', function () {
+        $('#div_3').fadeOut(800);
+      })
+    }); 
+  </script>
+  <script>
+    // Date Picker Code
+    $(function () {
+      $("#datepicker").datepicker();
+    });
+  </script>
+  <script>
+    // Accordian Code
+    $(function () {
+      $("#accordion").accordion();
+    });
+  </script>
+  <script>
+    $(function () {
+      i = 0
+      function showprogress() {
+        i += 5
+        if (i > 100) {
+          i = 0
+        }
+        $("#progress").progressbar({
+          value: i
+        })
+      }
+      $("#progress").progressbar({
+        value: 100
+      })
+      setInterval(showprogress, (1000))
+    })
+
+  </script>
+
+</head>
+
+<body>
+
+  <h1>Welcome to My Homepage</h1>
+  <a href="/index.html">Click here to return to homepage</a>
+
+  <p>This is a paragraph.</p>
+  <button id="btn_1">Click to Fade Div 1</button>
+  <div id="div_1" style="border: 1px solid black;">
+    <p>A paragraph in a div.</p>
+    <p>Another paragraph in a div.</p>
+  </div>
+  <br>
+  <button id="btn_2">Click to Fade Div 2</button>
+  <div id="div_2" style="border: 1px solid black;">
+    <p>A paragraph in another div.</p>
+    <p>Another paragraph in another div.</p>
+  </div>
+  <br>
+  <button id="btn_3">Click to Fade Div 3</button>
+  <div id="div_3" style="border: 1px solid black;">
+    <p>A paragraph in another div.</p>
+    <p>Another paragraph in another div.</p>
+  </div>
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div id="accordion">
+    <h3>Section 1</h3>
+    <div>
+      <p>
+        Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+        ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+        amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+        odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+      </p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+      <p>
+        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+        suscipit faucibus urna.
+      </p>
+    </div>
+
+
+
+    <div id="progress">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Color Counter</title>
+    <link rel="stylesheet" href="/new_style.css">
+    <link rel="icon" href="/icon.jpg">
+</head>
+
+<body>
+<div class="container">
+    <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><em class="fas fa-bars"></em></label>
+        <div class="content">
+            <div class="logo"><a href="#">3GIntegra.com</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Integra Improvements</a></li>
+                <li>
+                    <a href="#" class="desktop-link">CSCI450 Assignments</a>
+                    <input type="checkbox" id="show-features">
+                    <label for="show-features">CSCI450 Assignments</label>
+                    <ul>
+                        <li><a href="/chapter4/chapter04.html">Color Counter</a></li>
+                        <li><a href="/chapter7/sort.html">Sort String Arrays</a></li>
+                        <li><a href="/chapter8/cards.html">JavaScript Business Cards</a></li>
+                        <li><a href="/dynamic/dynamic.html">Dynamic Cards</a></li>
+                        <li><a href="/keypress/keypress.html">Key Press Assignment</a></li>
+                        <li><a href="/jQuery/jquery.html">JQuery Demo</a></li>
+                        <li><a href="/AJAX Textbook Code/livesearch.html">AJAX Demo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="desktop-link">Projects</a>
+                    <input type="checkbox" id="show-services">
+                    <label for="show-services">Projects</label>
+                    <ul>
+                        <li><a href="/project/audiodemo.html">Audio Player</a></li>
+                        <li><a href="/Prime/prime.html">Test for Prime</a></li>
+                        <li><a href="/Collection/collection.html">Marvel Super Hero Searcher</a></li>
+                        <li><a href="/88998811/exam.php">PHP Exam</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="desktop-link">Feedback</a>
+                    <input type="checkbox" id="show-services">
+                    <label for="show-services">Feedback</label>
+                    <ul>
+                        <li><a href="mailto:Grand.Am.Man2005@gmail.com">Send Me an Email</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="text">
+    <button id="red" type="button">
+        RED
+    </button>
+    <button id="blue" type="button">
+        BLUE
+    </button>
+    <button id="green" type="button">
+        GREEN
+    </button>
+    <p >
+        RED Count: <span id="displayCount_r">0</span>
+    </p>
+    <p>
+        Blue Count: <span id="displayCount_b">0</span>
+    </p>
+    <p>
+        Green Count:  <span id="displayCount_g">0</span>
+    </p>
+    <p>
+        Total Count:  <span id="totalCount">0</span>
+    </p>
+    <script>
+        var total = 0;
+        var display_total = document.getElementById("totalCount");
+
+        var count_r = 0;
+        var button_r = document.getElementById("red");
+        var display_r = document.getElementById("displayCount_r");
+        button_r.onclick = function(){
+            count_r++;
+            display_r.innerHTML = count_r;
+            document.body.style.background = 'red';
+            total++;
+            display_total.innerHTML = total;
+        }
+
+        var count_b = 0;
+        var button_b = document.getElementById("blue");
+        var display_b = document.getElementById("displayCount_b");
+        button_b.onclick = function(){
+            count_b++;
+            display_b.innerHTML = count_b;
+            document.body.style.background = 'blue';
+            total++;
+            display_total.innerHTML = total;
+        }
+
+        var count_g = 0;
+        var button_g = document.getElementById("green");
+        var display_g = document.getElementById("displayCount_g");
+        button_g.onclick = function(){
+            count_g++;
+            display_g.innerHTML = count_g;
+            document.body.style.background = 'green';
+            total++;
+            display_total.innerHTML = total;
+        }
+    </script>
+
+</div>
+
+
+</body>
+
+</html>
